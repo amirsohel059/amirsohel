@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>amirsohelsheikh - Resume</title>
+  <style>/* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'poppins', 'sans-serif';
+      box-sizing: border-box;
+    }
+    html{
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #060606;
+      line-height: 1.6;
+      color: #ffffff; 
+    }
+    
+    /* Style the social media icons */
+    .social-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .social-icon {
+      margin: 10px; /* Adjust the spacing between icons */
+      width: 30px; /* Set the desired width for your icons  */
+      text-decoration: none;
+      margin-right: 15px;
+      display: inline-block;
+      font-size: 22px;
+      color: #fbf6f6;
+      transition: transform 0.5s;
+    }
+    .social-icon:hover{
+      color: #2bdfd6;
+      transform: translateY(-8px);
+    }
+    
+    /* Define primary colors and styles */
+    
+    
+    
+    /* Navigation Bar */
+    #header {
+      width: 100%;
+      height: 12vh;
+      background-color: #000000; /* Change to your preferred navigation background color */
+      background-position: center;
+      padding:  10px 0;
+    }
+    
+    .container1 {
+      padding: 10px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    nav li {
+      list-style: none;
+      display: inline;
+      margin: 10px 20px;
+    }
+    
+    nav li a{
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+    }
+    
+    nav li a::after{
+      content: '';
+      width: 0%;
+      height: 3px;
+      background-color: #2bdfd6;
+      position: absolute; 
+      left: 0;
+      bottom: -6px;
+      transition: 0.5s;
+    }
+    nav li a:hover::after{
+      width: 100%;
+    }
+    
+    
+    /* Navigation Bar end */
+    
+    /* index about section*/
+    .about {
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: center;
+      background-image: url("images/pexels-tara-winstead-8386440.jpg");
+      font-size: 24px;
+      color: #ffffff; /* Change text color to be visible on the background image */
+    }
+    .about {
+      font-size: 40px;
+    }
+    .about h1{
+      margin: 50px;
+    }
+    .about p{
+      margin: 5px;
+    }
+
+    .down{
+      font-size: 10px;
+      
+        }
+    
+    .about span {
+      color: #2bdfd6;
+    }
+    
+    .about img {
+      width: 120px; /* Set the desired width for your photo */
+      border-radius: 40%; /* Add a circular border to create a rounded profile photo */
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    
+    .container {
+      max-width: 1400px;
+      margin: auto;
+      padding: 20px;
+    }
+    
+    /* index about section end */
+    
+    
+    /* About Me Section */
+    
+    #abouts {
+      padding:  80px 0;
+      color: #ddd;
+    }
+    
+    .row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    
+    .about-col-1 {
+      flex-basis: 35%;
+    }
+    .about-col-1 img {
+      flex-basis: 35%;
+      border-radius: 35px;
+    }
+    .about-col-2 {
+      flex-basis: 60%;
+    
+    }
+    
+    .sub-title {
+      font-size: 60px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .tab-titles{
+      display: flex;
+      margin: 20px 0 40px;
+    }
+    
+    .tab-links{
+      margin-right: 50px;
+      font-size: 20px;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
+    }
+    
+    .tab-links::after{
+      content: '';
+      width: 0;
+      height: 3px;
+      background: #2bdfd6;
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      transition: 0.3s;
+    }
+    
+    .tab-links.active-link::after{
+      width: 50%;
+    }
+    
+    .tab-contents ul li{
+      list-style: none;
+      margin: 10px 0;
+    }
+    
+    .tab-contents ul li span{
+      color: #2bdfd6;
+      font-size: 14px;
+    }
+    .tab-contents{
+      display: none;
+    }
+    
+    .tab-contents.active-tab{
+      display: block;
+    }
+    
+    
+    
+    /* About Me Section end*/
+    
+    
+    /* project Section Styles */
+    
+    #project{
+      padding: 50px 0;
+    }
+    
+    .work-list{
+      display: grid;
+      grid-template-columns: repeat(auto-fit , minmax(250px, 1fr));
+      grid-gap: 40px;
+      margin-top: 50px;
+    }
+    
+    .work{
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .work img{
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+      transition: transform 0.5s;
+    }
+    .layer{
+      width: 100%;
+      height: 0;
+      background: linear-gradient(rgba(0,0,0,0.6), #2bdfd6);
+      border-radius: 10px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 40px;
+      text-align: center;
+      font-size: 14px;
+      transition: height 0.5s;
+    }
+    .layer h3{
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    
+    .layer a{
+      margin-top: 20px;
+      color: #000000;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 60px;
+      background: #ddd;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      text-align: center;
+    }
+    .work:hover img{
+      transform: scale(1.1);
+    }
+    .work:hover .layer{
+      height: 100%;
+    }
+    .btn{
+      display: block;
+      margin: 50px auto;
+      width: fit-content;
+      border: 1px solid #2bdfd6;
+      padding: 14px 50px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #ddd;
+      transition: background 0.5s;
+    
+    }
+    .btn:hover{
+      background: #2bdfd6;
+    }
+    
+    /* project Section Styles end*/
+    
+    /* blogs Section Styles */
+    
+    #blog{
+      padding: 30px 0;
+    }
+    
+    .services-list{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 40px;
+      margin-top: 50px;
+    }
+    
+    .services-list div{
+      background: #262626;
+      padding: 40px;
+      font-size: 13px;
+      font-weight: 300;
+      border-radius: 10px ;
+      transition: background 0.5s, transform 0.5s;
+    }
+    
+    .services-list div i{
+      font-size: 50px;
+      margin-bottom: 30px;
+    }
+    
+    .services-list div h2{
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+    .services-list div a{
+      text-decoration: none;
+      color: #ddd;
+      font-size: 12px;
+      margin-top: 20px;
+      display: inline-block;
+    }
+    .services-list div:hover{
+      background: #2bdfd6;
+      transform: translateY(-10px);
+    }
+     /* blogs Section Styles-end */
+    
+    
+    
+    /* Contact Section Styles */
+    .contact-left{
+      flex-basis: 35%;
+    
+    }
+    .contact-right{
+      flex-basis: 60%;
+    }
+    
+    .contact-left p{
+      margin-top: 10px;
+    }
+    .contact-left p i {
+      color: #2bdfd6;
+      margin: 15px;
+      font-size: 25px;
+    }
+    .social-icons{
+      margin-top: 30px;
+    }
+    .social-icons a{
+      text-decoration: none;
+      font-size: 30px;
+      margin-right: 15px;
+      color: #ede8ea;
+      display: inline-block;
+      transition: transform 0.5s;
+    }
+    .social-icons a:hover{
+      color: #2bdfd6;
+      transform: translateY(-5px);
+    }
+    
+    .btn.btn2{
+      display: inline-block;
+      background: #33bdb6;
+    }
+    
+    .contact-left form{
+      width: 100%;
+    }
+    
+    form input, form textarea{
+      width: 100%;
+      border: 0;
+      outline: none;
+      background: #262626;
+      padding: 15px;
+      margin: 15px 0;
+      color: #2bdfd6;
+      font-size: 18px;
+      border-radius: 6px;
+    }
+    form .btn2{
+      padding: 14px 60px;
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    #msg{
+      color: #d2e8e8;
+      margin-top: -40px;
+      display: block;
+    }
+    
+    /* Contact Section Styles end */
+    
+    footer {
+      margin-top: 100px;
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+    }
+    
+    /* media queries for responsive design */
+    
+    nav .fa-solid{
+      display: none;
+    }
+    
+    @media only screen and (max-width: 1000px){
+    
+      
+      #header{
+        background-color: #000000;
+      }
+      .about {
+        font-size: 20px;
+        background-image: url(images/mobile\ bg.jpg);
+      }
+  
+      .about h1{
+        margin: 30px;
+      
+      }
+      .about p{
+        margin: 20px;
+      }
+      nav .fa-solid{
+        display: block;
+        font-size: 25px;
+      }
+    
+      .social-icon {
+        width: 20px;
+      }
+      nav ul{
+        background: #000000;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px; 
+        z-index: 2;
+        transition: right 0.5s;
+      }
+      nav ul li {
+        display: block;
+        font-size: 25px;
+      }
+      nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+      }
+      .sub-title{
+        font-size: 40px;
+      }
+      .about-col-1, .about-col-2{
+        flex-basis: 100%;
+      }
+      .about-col-1{
+        margin-bottom: 30px;
+      }
+      .about-col-2{
+        font-size: 14px;
+      }
+      .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+      }
+      .about-col-1 img {
+        width: 350px; /* Set the desired width for your photo */
+      }
+      .contact-left, .contact-right {
+        flex-basis: 100%;
+      }
+    
+    }
+  </style>
+    <script src="https://kit.fontawesome.com/6b12249788.js" crossorigin="anonymous"></script>
+</head>
+<body> 
+  <!-- Navigation Bar -->
+  <div id="header">
+    <div class="container1">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/amirsohelsheikh/" target="_blank" class="social-icon">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/amirsohel059" target="_blank" class="social-icon">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://medium.com/@sohelamir051" target="_blank" class="social-icon">
+          <i class="fa-brands fa-medium"></i>
+        </a>
+        <a href="mailto:sohelamir051@gmail.com" class="social-icon">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <!-- Add other social media icons in a similar manner -->
+      </div>
+      <nav>
+        <ul id="sidemenu">
+          <li><a href="#about">HOME</a></li>
+          <li><a href="#abouts">ABOUT ME</a></li>
+          <li><a href="#project">PROJECTS</a></li>
+            <!-- <li><a href="#blog">BLOGS</a></li> -->
+          <li><a href="#contacts">CONTACT</a></li>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+  </div>
+</div>
+
+  <!-- About Me Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <!-- Your professional photo goes here -->
+      <!-- img src="images/AMIR PHOTO.jpg" alt="Your Photo" -->
+      <p>Hey!</p>
+      <h1>Welcome to my portfolio. My name is <br><span>Amir Sohel Sheikh,</span><br> and I'm a Data Scientist.</h1>
+    </div>
+  </section>
+  <div class="down">
+    <a href="images/Resume.pdf" download="" class="btn">Download CV</a>
+  </div>
+  <!-- Work Experience Section -->
+  <section id="work" class="work">
+    <div class="container">
+      <h2>Work Experience</h2>
+      <ul>
+        <!-- Add your work experience details here as list items -->
+        <li>
+          <h3>Data Science Intern</h3>
+
+
+          <p>Rubixe | 12/22 - 05/23</p>
+
+
+          <p> During my internship at RUBIXE in Bangalore, I had the opportunity to dive into the exciting world of data science. RUBIXE is a dynamic and innovative company that provided a perfect environment for hands-on learning and growth in the field.
+
+            <h4>Key Highlights:</h4>
+
+            <h4>1. Data Analysis and Visualization:</h4> I actively contributed to conducting data analysis and visualization, helping transform raw data into actionable insights. This involved exploring and interpreting data patterns to support informed decision-making.
+            
+            <h4>2. Stakeholder Collaboration:</h4> My role involved close collaboration with stakeholders to understand their specific requirements and translate them into analysis tasks. This interaction allowed me to bridge the gap between technical data work and practical business applications.
+            
+            <h4>3. Project Management:</h4> I was responsible for developing project plans and ensuring that data processes were scaled efficiently. Meeting project deadlines was a priority, and I consistently delivered reports that met the defined timelines.
+            
+           <h4> 4. Problem Solving:</h4> Throughout my internship, I focused on identifying root causes of business problems and executed data analysis to uncover opportunities for improvement. My problem-solving skills were put to the test in this dynamic environment.
+            
+            My time at RUBIXE was a valuable experience that honed my data science skills, expanded my practical knowledge, and allowed me to contribute to real-world projects. I am grateful for the opportunity to have worked with a forward-thinking company like RUBIXE, and I look forward to applying the skills I acquired in my future endeavors.
+            </p>
+        </li>
+        <!-- Add more work experience items as needed -->
+      </ul>
+    </div>
+  </section>
+  
+ <!-- Certifications Section -->
+ <section id="certifications" class="certifications">
+  <div class="container">
+    <h2>Certifications</h2>
+    <p>Certified Data Scientist - Ministry of Electronics and Information Technology (Jul 2023)</p>
+    <p>Certified Data Scientist - IABAC™ - International Association of Business Analytics Certifications (Aug 2023)</p>
+    <p>Certified Data Scientist - DataMites™ (May 2022)</p>
+    <p>Data Science Foundation - IABAC™ - International Association of Business Analytics Certifications (Jul 2023)</p>
+  </div>
+</section>
+
+
+  <!-- About Me Section -->
+  <div id="abouts">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/AMIR PHOTO.jpg" alt="">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title"> About me </h1>
+          <p>Hello! I'm Amir Sohel Sheikh, a dedicated and approachable Data Scientist with a strong<br>passion for 
+            Python programming and problem-solving. I excel at extracting valuable 
+            <br>insights from complex datasets to drive informed business decisions.</p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+            <p class="tab-links" onclick="opentab('Education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li>Machine Learning, Deep Learning, NLP, Computer vision, Localization</li>
+              <li><span>Languages</span><br>C, Python, SQL, R</li>
+              <li><span>Libraries</span><br>Numpy, Pandas, sklearn, Tensorflow, matplotlib, seaborn, keras, etc.</li>
+              <li><span>Soft Skills</span><br>Problem Solving, Self-learning, Presentation, Effective Communication,
+                <br> Leadership Skills, Critical Thinking, Quick Learner.</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="Education"> 
+            <ul>
+              <li><span>Bachelor of Engineering (Electrical Engineering) - 2017-21</span>
+                <br>Shri Sai College Of Engineering And Technology, Bhadrawati<br><strong>CGPA:</strong> 9.93</li>
+              <li><span>HSC 2017</span><br>Science<br>62.62%</li>
+               <li><span>SSC 2015</span><br>69.20%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+ <!-- Projects Section -->
+
+
+ <div id="project">
+    <div class="container">
+      <h1 class="sub-title">My work</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/pexels-sorapong-chaipanya-4530815.jpg">
+          <div class="layer">
+            <h2>Rice-leaf-disease-prediction-using-CNN</h2>
+            <h3>Rice Leaf Disease Detection Project Overview:</h3>
+            <p>1. Developed a CNN model for classifying rice plant diseases (leaf blast, bacterial blight, brown spot).</p>
+            <p>2. Conducted data analysis, model creation, and used data augmentation to improve model performance.</p>
+            <p>3. Achieved a validation accuracy of approximately 87.50%.</p>
+            <p>4. A valuable tool for early disease diagnosis and management in rice plants.</p>
+            <a href="https://github.com/amirsohel059/Employee-Performance-Analysis"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/pexels-kindel-media-7688460.jpg">
+          <div class="layer">
+            <h3>Employee Performance Analysis</h3>
+            <p>1. Conducted analysis and prediction of employee performance at INX Future Inc.</p>
+            <p>2. Demonstrated data preprocessing steps and recommendations for performance improvement.</p>
+            <p>3. Developed an Artificial Neural Network model with 95.80% accuracy.</p>
+            <p>4. Demonstrated data preprocessing steps and recommendations for performance improvement.</p>
+            <a href="https://github.com/amirsohel059/Rice-leaf-disease-prediction-using-CNN"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/pexels-hüseyin-fatih-özden-18489981.jpg ">
+          <div class="layer">
+            <h3>data scinece projects</h3>
+            <p>here is my data scinece project discription</p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </div>
+      </div>
+      <a href="https://github.com/amirsohel059" class="btn">see more </a>
+    </div>
+  </div>
+
+  <!-- blogs Section
+
+  <div id="blog">
+    <div class="container">
+      <h1 class="sub-title">My blog</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-brands fa-github"></i>
+          <h2>Rice-leaf-disease-prediction-using-CNN</h2>
+          <h3>Rice Leaf Disease Detection Project Overview:</h3>
+          <p>1. Developed a CNN model for classifying rice plant diseases (leaf blast, bacterial blight, brown spot).</p>
+          <p>2. Conducted data analysis, model creation, and used data augmentation to improve model performance.</p>
+          <p>3. Achieved a validation accuracy of approximately 87.50%.</p>
+          <a href="https://github.com/amirsohel059/Rice-leaf-disease-prediction-using-CNN" target="_blank" >Learn more...</a>
+        </div>
+        <div>
+          <i class="fa-brands fa-linkedin"></i>
+          <h2>Covid 19 Pred</h2>
+          <p>asffghjkjhgfghjkjhgf hjkwsedrftgyhu wsexdcfvgbhn xcfvgbh</p>
+          <a href="#">Learn more...</a>
+        </div>
+        <div>
+          <i class="fa-brands fa-medium"></i>
+          <h2>Share Perfomance prediction</h2>
+          <p>asffghjkjhgfghjkjhgf hjkwsedrftgyhu wsexdcfvgbhn xcfvgbh</p>
+          <a href="#">Learn more...</a>
+        </div>
+      </div>
+    </div>
+  </div>
+ -->
+
+  <div id="contacts">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">
+            contact me 
+          </h1>
+          <p><i class="fa-solid fa-envelope"></i>sohelamir051@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i>7218328455</p>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <a href="images/Resume.pdf" download="" class="btn btn2">Download CV</a>
+        </div>
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Name" required>
+            <input type="Email" name="Email" placeholder="Email" required>
+            <textarea name="Message" rows="6" placeholder="Message" required></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+          <span id="msg"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- Optional: JavaScript code for form submission and interactivity -->
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+    
+    
+    
+    var sidemenu = document.getElementById("sidemenu");
+    
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    } 
+    
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwCuVz_TsXqTXc-1tuipgnDcegpB4Tu7W2KgR5XZcsOMNo7NjlBNsFe5vhphxQ28QXV/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+    
+    
+    
+    </script>
+</body>
+</html>
+<footer>
+  <p>&copy; 2023 Amir sohel Sheikh</p>
+</footer>
+</body>
+</html>
